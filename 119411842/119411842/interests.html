@@ -1,0 +1,202 @@
+<!DOCTYPE>
+<html>
+
+<head> <!-- Adding jQuery link -->
+<title>Dylan O'Connor CV</title>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<!-- Adding Internal CSS -->
+<style type="text/css">
+
+
+
+#banner{
+	position: relative;
+	
+	top: 0px;
+	left: 0px;
+
+	right: 0px;
+
+	height:20%;
+	width:100%;
+
+	background-color:#D3D3D3;	
+	border: solid thin black;
+
+	text-align:center;
+}
+
+#divcontainer{
+	position: relative;
+
+	top: 0px;
+	left: 0px;
+
+	right: 0px;
+
+	height:100%;
+	width:100%;
+}
+
+#navpanel{
+	position: absolute;
+
+	top: 0%;
+	left: 0%; 
+
+	right: 0%;
+
+	height:100%;
+	width:20%;
+	
+	background-color: #99CCFF;
+	border: dashed thin black; 
+	
+}
+
+
+#content{
+	position: absolute;
+
+	top:0%;
+	left:20%;
+
+	right: 0%;
+
+	height:100%;
+	width:80%;
+	
+
+	background-color: white;
+	border: solid thin black;
+      
+}
+
+#container {
+  overflow: hidden;
+  width: 600px;
+  height: 230px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top:150px;
+  padding: 50%;
+}
+
+#imgs {
+  display: block;
+  padding: 0;
+  width: 200%;
+}
+
+#imgs li {
+  padding-right: 10px;
+  display: inline-block;
+ *display:inline;
+}
+
+#imgs img {
+  width: 140px;
+  height: 120px;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: #ddd;
+}
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+</script>
+
+<div id="banner">
+  <h1> Dylan O'Connor CV </h1>
+</div>
+
+<div id="divcontainer">
+<!-- Adding links to cv and consultancy -->
+	<div id="navpanel">
+		  <b>Interests</b><br />
+ 		 <a href="index.html" title="Contents">Contents</a><br />
+		 <a href="personaldetails.html" title="Personal Details">Personal Details</a><br />
+ 		 <a href="educationaldetails.html" title="Educational Details">Educational Details</a><br />
+		 <a href="parttimeworkexperience.html" title="Part-Time Work Experience">Part-Time Work Experience</a><br />
+		 <a href="consultancy.html" title="Consultancy Services">Consultancy Services</a>
+		
+	</div>
+
+  <!-- Adding images for the Jquery image scroller -->
+	<div id="content">
+	 <span class="title">Interests</span>
+  <ul id="imgs">
+    <li><img src="travel.jpg" alt="" /></li>
+    <li><img src="melbourne.jpg" alt="" /></li>
+    <li><img src="soccer.jpg" alt="" /></li>
+    <li><img src="arsenal.png" alt="" /></li>
+    <li><img src="plane.jpg" alt="" /></li>
+    <li><img src="planes.jpg" alt="" /></li>
+  </ul>
+  <span class="title"></span> 
+<div id="controler"> </div>
+<!-- Coding the Jquery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="ImageScroll.js"></script> 
+<script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      <!-- console.log(ordinal); -->
+      
+    }
+  });
+
+  </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- Adding igeneral information on my interests -->
+  		<h3>Sport.</h3>
+  		<p>One of my main interests is sport mainly soccer.</p>
+ 		 <p>I have played soccer for over 10 years with my local club and continue to do so.I've been following soccer for many years and I am a fan of the Premier League club Arsenal</p>
+ 		 <p> I continue my involment in the local soccer club by helping coach the academy squads from under-7 up to under-10.</p>
+		 <h4>Travel.</h4>
+		 <p>Another main interest of mine is travel.<br /> </p>
+		<p> Most recently in June 2019 I visted New York with my family.I have previously travelled to countries such as Australia and Singapore</p>
+
+	</div>
+
+</div>
+
+
+
+</body>
+
+
+</html>
